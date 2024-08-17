@@ -1,10 +1,22 @@
-body{
+body, html {
     font-family: Arial, Helvetica, sans-serif;
-    /*background: linear-gradient(to bottom, #F2BEFC, #246EB9); */
-    background-color: #f7f7f7;
+    background-color: #FFF3B0;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 40px;
+}
+
+.sidebar {
+    width: 25%;
+    background: linear-gradient(to bottom, #246EB9, #231123);
+    padding: 20px;
+    color: white;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; /* Posiciona a barra lateral no canto esquerdo */
+    border-right: 2px solid black;
+    z-index: 100; /* Garante que a barra lateral esteja abaixo da barra horizontal */
 }
 
 .photo-resume {
@@ -14,14 +26,70 @@ body{
     border: 1px solid black;
 }
 
-.Brazil-Flag{
+.info-text {
+    text-align: center;
+}
+
+.main-content {
+    margin-left: 25%; /* Ajusta a margem esquerda para a largura da barra lateral */
+    padding: 25px;
+    margin-top: 1px; /* Ajusta para o espaço da barra horizontal */
+}
+
+.Brazil-Flag {
     vertical-align: middle;
     height: 23px;
     width: 23px;
 }
 
 .GitHub-Icon {
+    background-color: #f7f7f7;
+    border-radius: 50%;
     vertical-align: middle;
-    height: 23px;
-    width: 23px;
+    height: 30px;
+    width: 30px;
+}
+
+.horizontal-bar-top {
+    width: calc(100% - 25%); /* Ocupa a largura restante da página, subtraindo a largura da barra lateral */
+    background: #246EB9;
+    padding: 10px 0px;
+    position: fixed; /* Mantém a barra horizontal no topo */
+    top: 0;
+    left: 25%; /* Alinha a barra horizontal ao lado da barra lateral */
+    z-index: 90; /* Garante que a barra horizontal fique acima do conteúdo, mas abaixo da barra lateral */
+    color: white;
+    border: 1px solid black;
+}
+
+.horizontal-bar-top ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-bar-top li {
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.horizontal-bar-top li:hover {
+    background-color: #e2e6ea;
+}
+
+.horizontal-bar-top a{
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+section{
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+#about {
+    margin-top: 1px;
+    margin-bottom: 2px !important;
 }
